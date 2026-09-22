@@ -13,8 +13,8 @@ function App() {
 
   useEffect(() => {
     if (destParam && isStandalone) {
-      // Redirect to Google Maps immediately
-      const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destParam)}&travelmode=driving`;
+      // Redirect to Google Maps immediately and auto-start navigation
+      const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destParam)}&travelmode=driving&dir_action=navigate`;
       window.location.href = googleMapsUrl;
     } else if (destParam) {
       document.title = `${destParam}`;
